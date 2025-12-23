@@ -1,0 +1,16 @@
+# Build artifacts
+build/
+*.out
+*.o
+*.dSYM/
+
+# VS Code local settings (optional, keep tasks.json)
+.vscode/settings.json
+.vscode/launch.json
+
+# macOS
+.DS_Store
+
+# IDE
+*.xcodeproj/
+*.xcworkspace/
