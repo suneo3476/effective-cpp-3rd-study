@@ -12,6 +12,7 @@ Scott Meyers著「Effective C++ 第3版」のコードを試しながら学習�
 ```
 src/
   ch01/ - ch09/   # 各章のコード（itemXX.cpp）
+doc/              # 講義ノート（itemXX.md）
 build/            # コンパイル出力（.gitignore対象）
 ```
 
@@ -27,6 +28,13 @@ VS Code: `Cmd+Shift+B` で現在開いているファイルをビルド＆実行
 
 ## 進捗
 - [x] Item 1: C++を言語の連合体と見なす
+- [x] Item 2: #define より const, enum, inline を使え
+- [x] Item 3: const を可能な限り使え
+
+## 講義ノートについて
+- `doc/itemXX.md` に各項目の講義ノートを作成
+- 対話で出た質問・疑問・気づきも盛り込む
+- 手書きできる分量を意識
 
 ## 書籍構成
 - Chapter 1 (項目1-4): C++に慣れよう
