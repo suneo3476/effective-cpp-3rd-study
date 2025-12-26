@@ -30,6 +30,7 @@ VS Code: `Cmd+Shift+B` で現在開いているファイルをビルド＆実行
 - [x] Item 1: C++を言語の連合体と見なす
 - [x] Item 2: #define より const, enum, inline を使え
 - [x] Item 3: const を可能な限り使え
+- [x] Item 4: オブジェクトは使う前に初期化せよ
 
 ## 講義ノートについて
 - `doc/itemXX.md` に各項目の講義ノートを作成
