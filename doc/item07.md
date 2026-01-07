@@ -316,3 +316,10 @@ delete ps;  // 未定義動作！SpecialString 部分がリーク
 9. **レジスタは分割して使う？** → 使える。RAX(64bit) → EAX(32bit) → AX(16bit)。
 
 10. **レジスタを多く使うと不都合？** → 16個しかないので、枯渇するとメモリ退避が必要になり遅くなる。
+
+## 参考文献
+
+- Scott Meyers『Effective C++ 第3版』項目7
+- Stanley B. Lippman『Inside the C++ Object Model』
+  - URL: https://github.com/YuxuanLing/books/blob/master/c/C%2B%2B_En_Inside.The.C%2B%2B.Object.Model.pdf
+  - C++のオブジェクトモデル、vtable/vptr実装、メモリレイアウトの詳細を解説
