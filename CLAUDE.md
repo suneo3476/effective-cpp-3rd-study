@@ -46,6 +46,43 @@ VS Code: `Cmd+Shift+B` で現在開いているファイルをビルド＆実行
 - ユーザーからの指示は CLAUDE.md に反映する
 - 各 Item の最後に「Q&A サマリ」セクションを設け、質問と回答を簡潔にリストアップする
 
+## Git フロー（Git Flow）
+
+### ブランチ構成
+- `main`: 本番リリース用ブランチ（安定版）
+- `develop`: 開発の主軸ブランチ
+- `feature/itemXX`: 各 Item の機能開発用ブランチ
+
+### 作業フロー
+1. **新しい Item を始める時**
+   ```bash
+   git checkout develop
+   git pull origin develop
+   git checkout -b feature/item11
+   ```
+
+2. **作業中**
+   - 講義ノート作成
+   - CLAUDE.md の進捗更新
+   - コミット（適宜）
+
+3. **Item 完了時**
+   ```bash
+   git add .
+   git commit -m "Add lecture notes for Item XX"
+   git push -u origin feature/itemXX
+   ```
+   - PR を作成（feature/itemXX → develop）
+   - マージ後、feature ブランチは削除
+
+4. **適宜 develop から main へリリース**
+   - 複数の Item が完了したタイミングなどで
+   - PR を作成（develop → main）
+
+### ブランチ命名規則
+- Feature ブランチ: `feature/item{番号}` (例: `feature/item11`)
+- セッションIDサフィックス付き: `feature/item{番号}-{sessionId}` (例: `feature/item11-32ySi`)
+
 ## 書籍構成
 - Chapter 1 (項目1-4): C++に慣れよう
 - Chapter 2 (項目5-12): コンストラクタ、デストラクタ、代入演算子
