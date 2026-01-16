@@ -52,14 +52,14 @@ VS Code: `Cmd+Shift+B` で現在開いているファイルをビルド＆実行
 ### ブランチ構成
 - `main`: 本番リリース用ブランチ（安定版）
 - `develop`: 開発の主軸ブランチ
-- `feature/itemXX`: 各 Item の機能開発用ブランチ
+- `claude/itemXX-{sessionId}`: 各 Item の機能開発用ブランチ
 
 ### 作業フロー
 1. **新しい Item を始める時**
    ```bash
    git checkout develop
    git pull origin develop
-   git checkout -b feature/item11
+   git checkout -b claude/item11-32ySi
    ```
 
 2. **作業中**
@@ -71,9 +71,9 @@ VS Code: `Cmd+Shift+B` で現在開いているファイルをビルド＆実行
    ```bash
    git add .
    git commit -m "Add lecture notes for Item XX"
-   git push -u origin feature/itemXX
+   git push -u origin claude/itemXX-{sessionId}
    ```
-   - PR を作成（feature/itemXX → develop）
+   - PR を作成（claude/itemXX-{sessionId} → develop）
    - マージ後、feature ブランチは削除
 
 4. **適宜 develop から main へリリース**
@@ -81,8 +81,8 @@ VS Code: `Cmd+Shift+B` で現在開いているファイルをビルド＆実行
    - PR を作成（develop → main）
 
 ### ブランチ命名規則
-- Feature ブランチ: `feature/item{番号}` (例: `feature/item11`)
-- セッションIDサフィックス付き: `feature/item{番号}-{sessionId}` (例: `feature/item11-32ySi`)
+- Feature ブランチ: `claude/item{番号}-{sessionId}` (例: `claude/item11-32ySi`)
+- セッションIDは固定値: `32ySi`
 
 ## 書籍構成
 - Chapter 1 (項目1-4): C++に慣れよう
